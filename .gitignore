@@ -1,0 +1,26 @@
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore Logs
+logs
+*.log
+
+# Ignore the build directory
+/dist
+dist/
+
+
+# The file containing environment variables
+.env
+
+# Ignore IDE specific files
+/.idea
+*.sw*
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*

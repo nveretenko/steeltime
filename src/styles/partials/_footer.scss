@@ -1,0 +1,31 @@
+.footer {
+  font-family: 'webnarmedium', sans-serif;
+  background-color: $primary;
+  padding: 4rem 0;
+  bottom: 0;
+  color: $silver;
+  p,
+  a {
+    font-size: 1.2rem;
+  }
+  .title-footer {
+    text-transform: uppercase;
+  }
+  a {
+    color: $silver;
+    transition: 0.4s;
+    &:hover {
+      color: $secondary;
+      transition: 0.4s;
+    }
+  }
+}
+
+.order-btn.order-btn_footer {
+  background-color: transparent;
+  border: 1px solid;
+  &:hover {
+    background-color: transparent;
+    color: $secondary;
+  }
+}

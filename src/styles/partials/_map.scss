@@ -1,0 +1,68 @@
+.map {
+  margin-bottom: 4rem;
+  overflow-x: hidden;
+  .slogan {
+    margin: 3.75rem 0;
+    font-weight: bold;
+    color: #404e61;
+    text-transform: uppercase;
+    p:first-child {
+      font-size: 1.125rem;
+      margin-bottom: 0;
+    }
+    p:last-child {
+      font-size: 2.937rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.wrapper-map {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 77, 97, 0.15);
+  }
+}
+
+.arrow-down {
+  position: relative;
+  transform: translateX(50%);
+  margin: 1.875rem;
+}
+.arrow-down span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid $secondary;
+  border-right: 5px solid $secondary;
+  transform: rotate(45deg);
+  margin: -1rem;
+  animation: arrow-down 2s infinite;
+}
+.arrow-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
