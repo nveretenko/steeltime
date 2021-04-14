@@ -1,5 +1,3 @@
-let el = $('.nav-link-languages')
-
-el.click(function () {
-  $('.list-languages').toggle();
-})
+document.querySelector('.nav-link-languages').onclick = function () {
+  document.querySelector('.list-languages').classList.toggle('toggle')
+}

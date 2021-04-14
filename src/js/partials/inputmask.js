@@ -1,3 +1,3 @@
-$(document).ready(function(){
-    $('input[type=tel]').inputmask("+38(099) 999-99-99");
-});
+var phoneMask = IMask(document.getElementById('inputPhone'), {
+  mask: '+38{(000)}-000-00-00',
+})

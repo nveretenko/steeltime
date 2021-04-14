@@ -1,22 +1,31 @@
-$(document).ready(function () {
-  $('body').append('<a href="#" class="button-to-top" title="Up"></a>')
-})
+/* begin begin Back to Top button  */
+;(function () {
+  'use strict'
 
-$(function () {
-  $.fn.scrollToTop = function () {
-    $(this).hide().removeAttr('href')
-    if ($(window).scrollTop() >= '250') $(this).fadeIn('slow')
-    var scrollDiv = $(this)
-    $(window).scroll(function () {
-      if ($(window).scrollTop() <= '250') $(scrollDiv).fadeOut('slow')
-      else $(scrollDiv).fadeIn('slow')
-    })
-    $(this).click(function () {
-      $('html, body').animate({ scrollTop: 0 }, 'slow')
-    })
+  function trackScroll() {
+    let scrolled = window.pageYOffset
+    let coords = document.documentElement.clientHeight
+
+    if (scrolled > coords) {
+      goTopBtn.classList.add('back-to-top-show')
+    }
+    if (scrolled < coords) {
+      goTopBtn.classList.remove('back-to-top-show')
+    }
   }
-})
 
-$(function () {
-  $('.button-to-top').scrollToTop()
-})
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    }
+  }
+
+  let goTopBtn = document.querySelector('.back-to-top')
+
+  window.addEventListener('scroll', trackScroll)
+  goTopBtn.addEventListener('click', backToTop)
+})()
+/* end begin Back to Top button  */
