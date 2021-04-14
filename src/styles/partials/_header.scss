@@ -63,6 +63,9 @@
   position: absolute;
   padding: 0.625rem;
   left: 45px;
+  &.toggle {
+    display: block;
+  }
 }
 
 .nav-link-languages {

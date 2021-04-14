@@ -4,6 +4,9 @@
   font-family: 'webnarmedium', sans-serif;
   position: relative;
   color: $primary;
+  .wrapper-content {
+    padding: 2rem 0;
+  }
   .bg {
     background-color: $primary;
   }
@@ -27,13 +30,14 @@
     }
   }
   h2 {
-    font-family: 'webnarbold';
+    font-family: 'webnarbold', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     padding-top: 3.125rem;
-    margin-bottom: 3.125rem;
   }
   h3 {
-    font-family: 'webnarbold';
+    font-family: 'webnarbold', sans-serif;
+    font-weight: 700;
     font-size: 1.3125rem;
     text-transform: uppercase;
     & + p {
@@ -129,4 +133,13 @@
 
 .text-justify {
   text-align: justify;
+}
+
+
+@media screen and(min-width:768px) {
+  .production {
+    h2 {
+      margin-bottom: 3.125rem;
+    }
+  }
 }

@@ -9,6 +9,9 @@ logs
 /dist
 dist/
 
+/build
+build/
+
 
 # The file containing environment variables
 .env
