@@ -36,6 +36,7 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
+    "imask": "^6.0.7",
     "popper.js": "^1.16.0",
     "unitegallery": "^1.7.28",
     "yargs": "^15.0.2"
